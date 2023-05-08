@@ -9,6 +9,9 @@ import { GifsService } from 'src/app/gifs/services/gifs.service';
 export class SidebarComponent {
   constructor(private gifsService: GifsService) {}
 
+  public getSideBarTag(tag: string) {
+    return this.gifsService.searchTag(tag);
+  }
   get tags() {
     return this.gifsService.tagsHistory;
   }

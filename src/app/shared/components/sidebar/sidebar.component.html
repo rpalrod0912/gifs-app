@@ -6,6 +6,7 @@
     <button
       *ngFor="let item of this.tags"
       class="list-group-item list-group-item-action"
+      (click)="getSideBarTag(item)"
     >
       {{ item | titlecase }}
     </button>
